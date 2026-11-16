@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#F2F2F7">
+  <title>Мой дневник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ РАСХОДНИКИ ============ -->
+<main class="page active" id="page-supplies">
+  <header class="nav-large nav-3col">
+    <button class="nav-icon" id="historyBtn" aria-label="История">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <polyline points="12 7 12 12 15.5 14"/>
+      </svg>
+    </button>
+    <h1>Расходники</h1>
+    <button class="nav-action" data-add="supply" aria-label="Добавить">+</button>
+  </header>
+  <div class="grid" id="grid-supplies"></div>
+</main>
+
+<!-- ============ ДОКТОРА ============ -->
+<main class="page" id="page-doctors">
+  <header class="nav-large nav-with-action">
+    <h1>Доктора</h1>
+    <button class="nav-action" data-add="doctor">+</button>
+  </header>
+  <div class="list" id="list-doctors"></div>
+</main>
+
+<!-- ============ АНАЛИЗЫ ============ -->
+<main class="page" id="page-tests">
+  <header class="nav-large nav-with-action">
+    <h1>Анализы</h1>
+    <button class="nav-action" data-add="test">+</button>
+  </header>
+  <div class="list" id="list-tests"></div>
+</main>
+
+<!-- ============ НИЖНЕЕ МЕНЮ ============ -->
+<nav class="tabbar">
+  <button class="tab active" data-page="supplies">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 7l-8-4-8 4 8 4 8-4z"/>
+      <path d="M4 7v10l8 4 8-4V7"/>
+      <path d="M12 11v10"/>
+    </svg>
+    <span class="tab-label">Расходники</span>
+  </button>
+  <button class="tab" data-page="doctors">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 21v-1a6 6 0 0116 0v1"/>
+    </svg>
+    <span class="tab-label">Доктора</span>
+  </button>
+  <button class="tab" data-page="tests">
+    <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+    </svg>
+    <span class="tab-label">Анализы</span>
+  </button>
+</nav>
+
+<!-- ============ МОДАЛКА ============ -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2 id="modalTitle">Добавить</h2>
+    <div class="modal-fields" id="modalFields"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="modalCancel">Отмена</button>
+      <button class="btn-save" id="modalSave">Сохранить</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ МОДАЛКА ИСТОРИИ ============ -->
+<div class="modal" id="historyModal">
+  <div class="modal-box modal-box-history">
+    <h2>История</h2>
+    <div class="history-list" id="historyList"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="historyClear">Очистить</button>
+      <button class="btn-save" id="historyClose">Готово</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
