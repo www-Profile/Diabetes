@@ -2,7 +2,7 @@
 // КОНСТАНТЫ И СОСТОЯНИЕ
 // ================================================================
 const KEYS = {
-  supplies: 'diabetes_supplies_v8',
+  supplies: 'diabetes_supplies_v9',
   doctors:  'diabetes_doctors_v1',
   tests:    'diabetes_tests_v1',
   history:  'diabetes_history_v1',   // ← новое
@@ -19,13 +19,13 @@ let tests    = [];
 function defaultSupplies() {
   const n = Date.now();
   return [
-    { id: n + 1, name: 'Инсулин Апидра', count: 2,  img: 'img/apidra.png' },
-    { id: n + 2, name: 'Гларгин',        count: 2,  img: 'img/glargin.png' },
-    { id: n + 3, name: 'Канюли',         count: 10, img: 'img/cannula.png' },
-    { id: n + 4, name: 'Резервуары',     count: 5,  img: 'img/reservoir.png' },
-    { id: n + 5, name: 'Либра',          count: 1,  img: 'img/libre.png' },
+    { id: n + 1, name: 'Инсулин Апидра', count: 6,  img: 'img/apidra.png' },
+    { id: n + 2, name: 'Гларгин',        count: 17,  img: 'img/glargin.png' },
+    { id: n + 3, name: 'Канюли',         count: 16, img: 'img/cannula.png' },
+    { id: n + 4, name: 'Резервуары',     count: 29  ,  img: 'img/reservoir.png' },
+    { id: n + 5, name: 'Либра',          count: 4,  img: 'img/libre.png' },
     { id: n + 6, name: 'Сенсоры',        count: 3,  img: 'img/sensor.png' },
-    { id: n + 7, name: 'Тест-полоски',   count: 50, img: 'img/strips.png' },
+    { id: n + 7, name: 'Тест-полоски',   count: 2, img: 'img/strips.png' },
   ];
 }
 
